@@ -1,0 +1,129 @@
+---
+title: "Exploring the Effects of Texting Style and Tone on Response Behavior in Dating Apps"
+author: "Lorena Bulnes, Dayana Caluna, Tomoko Hida & Sophia Mu"
+format: html
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+#| echo: FALSE
+#| include: false
+#| message: FALSE
+#| warning: FALSE 
+
+###### Loading up data and packages necessary #####
+library(readr)
+library(car)
+library(readr)
+library(ggplot2)
+library(tidyverse)
+library(knitr)
+
+data <- read_csv("data/data.csv")
+data <- data[-c(1,2), ]
+```
+
+| Curious - Abbreviation                                    | Curious - No Abbreviation                                  |
+|---------------------------------|---------------------------------|
+| ![](Copy of LORENA SDS290 Project (1)/1.png){width="283"} | ![](Copy of LORENA SDS290 Project (1)/2.png){width="283"}  |
+| **Flirty - Abbreviation**                                 | **Flirty - No Abbreviation**                               |
+| ![](Copy of LORENA SDS290 Project (1)/3.png)              | ![](Copy of LORENA SDS290 Project (1)/4.png){width="1080"} |
+
+: Figure 1: Images
+
+```{r}
+#| echo: FALSE
+#| include: false
+#| message: FALSE
+#| warning: FALSE 
+
+### Data Wrangling  ####
+data <- data |>
+  select("Response_1":"style") 
+
+data$Response_1 <- ifelse(data$Response_1 == "Strongly Disagree\n1\n", "1",
+                        ifelse(data$Response_1 == "Strongly Agree\n5\n", "5",
+                               data$Response_1))
+data$Response_2 <- ifelse(data$Response_2 == "Strongly Disagree\n1\n", "1",
+                        ifelse(data$Response_2 == "Strongly Agree\n5\n", "5",
+                               data$Response_2))
+data$Response_3 <- ifelse(data$Response_3 == "Strongly Disagree\n1\n", "1",
+                        ifelse(data$Response_3 == "Strongly Agree\n5\n", "5",
+                               data$Response_3))
+data <- data[!is.na(data$Response_1), ]
+
+
+
+data$Response_1 <- as.numeric(data$Response_1)
+data$Response_2 <- as.numeric(data$Response_2)
+data$Response_3 <- as.numeric(data$Response_3)
+
+data <- data %>%
+  mutate(Average = (Response_1 + Response_2 + Response_3) / 3)
+```
+
+```{r}
+#| echo: false 
+#| warning: false
+#| message: false
+#| include: true
+#| label: fig-2
+#| fig-cap: Descriptive Statistics 
+
+
+ds <- data %>%
+  group_by(message, style) %>%
+  summarise(n = n(),
+            mean = mean(Average),
+            S = sd(Average))
+
+kable(ds)
+```
+
+```{r}
+#| echo: FALSE
+#| include: false
+#| message: FALSE
+#| warning: FALSE 
+
+text_lm <- lm(Average ~ message * style, data = data)
+
+# Assessing Conditions 
+leveneTest(Average ~ message * style, data = data)
+qplot(x = text_lm$residuals, bins = 6)
+plot(text_lm, which = 2)
+plot(text_lm, which = 1)
+```
+
+```{r}
+#| echo: false 
+#| warning: false
+#| message: false
+#| include: true
+#| label: fig-3
+#| fig-cap: Boxplot
+
+
+## Add title and caption 
+ggplot(data, aes(x = style, y = Average, fill = message)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("forestgreen", "red")) +
+  theme_minimal() +
+  labs(x = "Style",
+       fill = "Message")
+```
+
+```{r}
+#| echo: false 
+#| warning: false
+#| message: false
+#| include: true
+#| label: fig-4
+#| fig-cap: ANOVA 
+
+text_lm <- lm(Average ~ message * style, data = data)
+anova <- anova(text_lm)
+
+kable(anova)
+```
