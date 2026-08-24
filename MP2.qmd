@@ -1,10 +1,16 @@
 ---
 title: "Exploring the Effects of Texting Style and Tone on Response Behavior in Dating Apps"
 author: "Lorena Bulnes, Dayana Caluna, Tomoko Hida & Sophia Mu"
-format: html
+format: pdf
 editor_options: 
   chunk_output_type: inline
+bibliography: citation.bib
+csl: apa.csl
 ---
+
+## Introduction
+
+Among U.S. adults who identify as ‘single and looking’, 45% of adults have used a dating platform in the past year, according to a survey conducted by the Pew Research Center in 2022 [@cite]. Dating culture has changed drastically with the evolution of online dating platforms such as Tinder and Hinge, and their integration of preference filters and creative prompts have helped keep these apps culturally relevant. As much as these additions to the platforms have made them more attractive to those looking for long-term partners, individuals’ willingness to connect after initial messages remains precarious. This study aimed to investigate how texting style and tone in online dating app messages influenced individuals' willingness to connect. Specifically, we asked: How do messages with different texting styles (with or without abbreviations) and tones (curious vs. flirty) affect connection likelihood? We hypothesized that there would be a main effect of texting style, such that those who received a message without abbreviations would be more willing to connect compared to those who received a message with abbreviations. We also hypothesized that there would be a main effect of texting tone, such that those who received a curious message would be more willing to connect compared to those who got a flirty message. Finally, we hypothesized that there would be an interaction between message style and tone such that the effect of message tone on participants’ willingness to connect depended on message style.
 
 ```{r}
 #| echo: FALSE
@@ -22,15 +28,9 @@ library(knitr)
 
 data <- read_csv("data/data.csv")
 data <- data[-c(1,2), ]
+
+
 ```
-
-| Curious - Abbreviation                                    | Curious - No Abbreviation                                  |
-|---------------------------------|---------------------------------|
-| ![](Copy of LORENA SDS290 Project (1)/1.png){width="283"} | ![](Copy of LORENA SDS290 Project (1)/2.png){width="283"}  |
-| **Flirty - Abbreviation**                                 | **Flirty - No Abbreviation**                               |
-| ![](Copy of LORENA SDS290 Project (1)/3.png)              | ![](Copy of LORENA SDS290 Project (1)/4.png){width="1080"} |
-
-: Figure 1: Images
 
 ```{r}
 #| echo: FALSE
@@ -63,27 +63,67 @@ data <- data %>%
   mutate(Average = (Response_1 + Response_2 + Response_3) / 3)
 ```
 
+\newpage
+
+![Images](images/Screenshot 2024-12-11 165706.png){fig-align="center" width="900"}
+
+## Methods
+
+We conducted a randomized two-way factorial experiment involving 51 college students to examine the effects of texting styles and texting tones on participants' attitudes toward online dating messages. Each participant was randomly assigned to view one of four text messages varying in texting style (no abbreviations, abbreviations) and texting tone (flirty, curious). The survey was administered online, ensuring anonymity and allowing for efficient data collection. This study utilized a 2 (texting style: no abbreviations, abbreviations) x 2 (texting tone: flirty, curious) between-subjects factorial design. These factors were crossed, creating four experimental conditions: (no abbreviations, flirty), (no abbreviations, curious), (abbreviations, flirty), and (abbreviations, curious) (see Table 1 for stimuli). Participants, who served as the experimental units, were randomly assigned to one condition and completed an anonymous online Qualtrics survey. We wanted to investigate the participants’ overall willingness to connect after receiving the message. Participants answered 3 likert-scale statements regarding their attitudes towards the message: “I would be excited to receive this message,” “I would respond to this message,” and “I would hope to continue messaging this person.” Each statement was rated on a scale from 1 (*Strongly disagree*) to 5 (*Strongly agree*). We aggregated these 3 questions by taking an average of all scores, such that we had one variable representing overall willingness to connect. Participants first provided consent, viewed one text message based on their assigned condition, and then completed the survey, ensuring controlled exposure to the manipulation and efficient data collection.
+
 ```{r}
 #| echo: false 
 #| warning: false
 #| message: false
 #| include: true
 #| label: fig-2
-#| fig-cap: Descriptive Statistics 
+#| fig-cap: Boxplot representing willingness to connect across message type and tone. 
 
 
-ds <- data %>%
-  group_by(message, style) %>%
-  summarise(n = n(),
-            mean = mean(Average),
-            S = sd(Average))
-
-kable(ds)
+## Add title and caption 
+ggplot(data, aes(x = style, y = Average, fill = message)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("forestgreen", "red")) +
+  theme_minimal() +
+  labs(x = "Style",
+       fill = "Message",
+       title = "Willingness to Connect Across Message Type and Tone.")
 ```
+
+## Result
+
+Our @fig-2 visualizes the distribution of responses depending on the combination of message tone and texting style. From this exploratory visualization alone, it looks as though there may be an impact on willingness to respond depending on texting style, but the impact on willingness to respond depending on message tone is visually less apparent. Especially for the texting style condition, the median values for willingness to respond across the levels of message tone look relatively the same. In order to assess whether these differences are true differences or not, we computed three corresponding F statistics using an ANOVA test in @fig-3.
+
+```{r}
+#| echo: false 
+#| warning: false
+#| message: false
+#| include: true
+#| label: fig-3
+#| fig-cap: ANOVA 
+
+text_lm <- lm(Average ~ message * style, data = data)
+anova <- anova(text_lm)
+
+kable(anova)
+```
+
+Before proceeding with the ANOVA test, we assessed that our data meets the ANOVA conditions (see Appendix). We began by evaluating the S condition for similar variances for the ANOVA test by using Levene’s test for homogeneity of variances. As our data’s p-value associated with Levene’s test produced p = 0.586, we fail to reject the null hypothesis for Levene’s test that the absolute deviation is the same for all levels of a factor. Our S condition is thus satisfied. Our Q-Q plot and histogram plot allows us to assess the normality condition, which we see is satisfied. Our observed residuals generally follow the theoretical quantiles of the normal distribution in the QQ plot, and the histogram is generally symmetric and unimodal. The Z condition for zero mean residuals can be assessed by our unimodal histogram figure, which demonstrates that our data’s residuals from the fitted model is centered around zero–our Z condition is satisfied as well. Finally, we assume that the conditions for constant effects, additive effects, and independent residuals are met for our design. We especially controlf or independent residuals as both factors of message tone and texting style were randomly assigned to each participant.
+
+In our experiment, we intended to assess the impact of message tone on the willingness to respond, the impact of texting style on the willingness to respond, as well as the impact of the interaction between message tone and texting style on the average value of willingness to respond (measured between 1 and 5). From @fig-3, we see that for each of the corresponding F statistics, the p-values are far greater than our alpha level 0.05. We found no significant main effect of message tone F(1, 46) = .016, p = .90. We also found no significant main effect of texting style, F(1, 46) = .17, p = .681. Finally, we found no significant interaction between message tone and texting style, F(1, 46) = .558, p = .459. This means that our observed differences between responses across the message tone, across the texting style, and across the interactions of the message tone and texting style were not large enough to indicate any main effect on the willingness to respond in the population. We found no statistically significant evidence that message tone of flirty or curious message, texting style of abbreviation or no abbreviations in a message, or the interaction of the two conditions had any effect on the average individual’s willingness to respond.
+
+## Conclusion
+
+This study explored the complexity of online texting, focusing on how texting styles (abbreviations vs. no abbreviations) and tones (curious vs. flirty) affect the likelihood of a connection on an online dating site. The findings reveal that neither texting style, message tone, nor the interaction between these factors had a statistically significant effect on individuals' willingness to respond.
+
+This study had several limitations. First, the sample size was small and consisted only of college students, which may not be representative of the broader population. This limitation suggests that, due to a lack of a diverse sample, the results may be skewed. Future research could address this by collecting data from a larger and more diverse range of participants. The specific prompts used to represent the curious and flirty tones are also a limitation. Participants who typically enjoy a flirtatious tone may not have resonated with the specific prompt used in the study. Refining and testing these prompts for broader appeal could improve the study’s reliability. Lastly, participants may have struggled to visualize a connection with their “physically ideal match.” Factors such as the use of dating apps, prior dating experiences, and individual sexualities may have influenced the responses. Gathering more detailed information on these factors and investigating their relationship with our factors of interest could provide clearer insights into what impacts online connections.
+
+In summary, our findings do not provide evidence that texting styles or message tones impact willingness to respond—although this does not mean there is no overall effect of style and tone within online dating. Future research could deepen our understanding of this relationship, ultimately informing approaches to effective online communication and engagement.
+
+## Appendix
 
 ```{r}
 #| echo: FALSE
-#| include: false
 #| message: FALSE
 #| warning: FALSE 
 
@@ -94,36 +134,4 @@ leveneTest(Average ~ message * style, data = data)
 qplot(x = text_lm$residuals, bins = 6)
 plot(text_lm, which = 2)
 plot(text_lm, which = 1)
-```
-
-```{r}
-#| echo: false 
-#| warning: false
-#| message: false
-#| include: true
-#| label: fig-3
-#| fig-cap: Boxplot
-
-
-## Add title and caption 
-ggplot(data, aes(x = style, y = Average, fill = message)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c("forestgreen", "red")) +
-  theme_minimal() +
-  labs(x = "Style",
-       fill = "Message")
-```
-
-```{r}
-#| echo: false 
-#| warning: false
-#| message: false
-#| include: true
-#| label: fig-4
-#| fig-cap: ANOVA 
-
-text_lm <- lm(Average ~ message * style, data = data)
-anova <- anova(text_lm)
-
-kable(anova)
 ```

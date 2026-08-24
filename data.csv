@@ -1,0 +1,130 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,Q16,Q17,Response_1,Response_2,Response_3,message,style
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,"By clicking, ""Yes,"" below, I confirm that I read the consent form and agree to participate in the study",Are you 18 or older?,"Based on the message you just read, please respond to the following questions: - I would be excited to receive this message.","Based on the message you just read, please respond to the following questions: - I would respond to this message.","Based on the message you just read, please respond to the following questions: - I would hope to continue messaging this person.",message,style
+"{""ImportId"":""startDate"",""timeZone"":""America/Denver""}","{""ImportId"":""endDate"",""timeZone"":""America/Denver""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""America/Denver""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID19""}","{""ImportId"":""QID20""}","{""ImportId"":""QID21_1""}","{""ImportId"":""QID21_2""}","{""ImportId"":""QID21_3""}","{""ImportId"":""message""}","{""ImportId"":""style""}"
+2024-11-25 05:29:47,2024-11-25 05:30:59,IP Address,131.229.0.16,100,72,True,2024-11-25 05:31:00,R_1rcZiaECifge99f,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,4,3,Flirty,NoAbbreviation
+2024-11-25 07:29:45,2024-11-25 07:30:22,IP Address,131.229.0.21,100,36,True,2024-11-25 07:30:23,R_724QsXMJg7hMAnv,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+","Strongly Disagree
+1
+",Flirty,Abbreviation
+2024-11-25 11:38:13,2024-11-25 11:39:31,IP Address,131.229.0.26,100,77,True,2024-11-25 11:39:31,R_1jAbmWLWY4afAT7,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",2,3,Curious,Abbreviation
+2024-11-25 12:56:06,2024-11-25 12:56:33,IP Address,131.229.0.24,100,27,True,2024-11-25 12:56:33,R_5kN2bolWwIWLCdH,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+","Strongly Disagree
+1
+",Curious,NoAbbreviation
+2024-11-25 13:56:10,2024-11-25 13:56:54,IP Address,70.95.150.50,100,43,True,2024-11-25 13:56:54,R_1wQ7j7qzmdpAp5D,,,,,32.9511,-117.2241,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+","Strongly Disagree
+1
+",Flirty,Abbreviation
+2024-11-25 14:12:40,2024-11-25 14:13:28,IP Address,131.229.0.18,100,47,True,2024-11-25 14:13:28,R_1Ioz2sGVM9jV0XC,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+","Strongly Disagree
+1
+",Curious,Abbreviation
+2024-11-25 17:42:01,2024-11-25 17:42:53,IP Address,131.229.0.24,100,52,True,2024-11-25 17:42:54,R_1fAivZKzW3XaObv,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+",2,Flirty,NoAbbreviation
+2024-11-25 20:58:28,2024-11-25 20:59:15,IP Address,73.218.215.233,100,46,True,2024-11-25 20:59:15,R_5w50X2p0OoSVstl,,,,,42.3356,-72.6718,anonymous,EN,Yes,Yes,3,"Strongly Agree
+5
+",4,Curious,NoAbbreviation
+2024-11-26 08:04:34,2024-11-26 08:05:17,IP Address,131.229.0.8,100,43,True,2024-11-26 08:05:18,R_5VSlGHr58YMbu1P,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,4,2,Flirty,Abbreviation
+2024-11-26 08:37:08,2024-11-26 08:37:42,IP Address,131.229.0.5,100,33,True,2024-11-26 08:37:43,R_5Led3YFAKL8Vnfj,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,3,4,3,Curious,Abbreviation
+2024-11-26 12:12:15,2024-11-26 12:13:20,IP Address,131.229.0.15,100,64,True,2024-11-26 12:13:20,R_5MF6ySYfqP8EqCl,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,4,4,Curious,NoAbbreviation
+2024-11-26 12:36:21,2024-11-26 12:37:23,IP Address,131.229.0.23,100,61,True,2024-11-26 12:37:23,R_6q9sS7g2N5wrVaw,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,"Strongly Disagree
+1
+","Strongly Disagree
+1
+",Flirty,NoAbbreviation
+2024-11-26 12:42:40,2024-11-26 12:43:08,IP Address,131.229.0.8,100,27,True,2024-11-26 12:43:08,R_6eNJ3UQfSm57Oil,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,2,4,Curious,NoAbbreviation
+2024-11-26 12:43:04,2024-11-26 12:43:44,IP Address,131.229.0.29,100,39,True,2024-11-26 12:43:44,R_5xXIEJZd9znlxFO,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,2,3,Flirty,Abbreviation
+2024-11-27 13:20:41,2024-11-27 13:23:01,IP Address,69.112.186.199,100,140,True,2024-11-27 13:23:02,R_7Pw8tDpB5b3ioJj,,,,,41.136,-73.406,anonymous,EN,Yes,Yes,2,"Strongly Disagree
+1
+",2,Curious,Abbreviation
+2024-11-27 19:59:25,2024-11-27 20:01:00,IP Address,67.81.114.252,100,95,True,2024-11-27 20:01:00,R_5dIqN4KbD37ityx,,,,,41.1484,-74.5827,anonymous,EN,Yes,Yes,4,3,2,Flirty,NoAbbreviation
+2024-11-29 13:16:12,2024-11-29 13:17:58,IP Address,71.192.24.214,100,105,True,2024-11-29 13:17:58,R_7BW7rPgCySEM0Sh,,,,,42.3251,-72.6276,anonymous,EN,Yes,Yes,2,3,2,Curious,NoAbbreviation
+2024-11-29 18:03:54,2024-11-29 18:04:59,IP Address,205.153.95.155,100,64,True,2024-11-29 18:05:00,R_3RZN09wnRE09CLv,,,,,37.751,-97.822,anonymous,EN,Yes,Yes,2,2,2,Flirty,NoAbbreviation
+2024-11-30 10:48:07,2024-11-30 10:49:24,IP Address,108.5.176.168,100,77,True,2024-11-30 10:49:25,R_5XhC9FuoyMVY6Xx,,,,,40.8125,-74.2134,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",2,"Strongly Disagree
+1
+",Curious,Abbreviation
+2024-11-30 14:39:07,2024-11-30 14:39:28,IP Address,50.186.202.234,100,21,True,2024-11-30 14:39:29,R_1zU99RN0ZjaKGas,,,,,39.109,-77.2489,anonymous,EN,Yes,Yes,2,"Strongly Disagree
+1
+",2,Flirty,Abbreviation
+2024-11-30 14:48:02,2024-11-30 14:48:44,IP Address,50.186.202.234,100,41,True,2024-11-30 14:48:45,R_3LdaVYUXmloiVgY,,,,,39.109,-77.2489,anonymous,EN,Yes,Yes,2,"Strongly Disagree
+1
+","Strongly Disagree
+1
+",Curious,NoAbbreviation
+2024-11-30 14:48:02,2024-11-30 14:49:10,IP Address,50.186.202.234,100,67,True,2024-11-30 14:49:10,R_7jANtpIFPEXb9A6,,,,,39.109,-77.2489,anonymous,EN,Yes,Yes,2,4,3,Curious,Abbreviation
+2024-11-30 16:17:21,2024-11-30 16:19:17,IP Address,131.229.0.5,100,115,True,2024-11-30 16:19:17,R_6g9s6FoZ7Kt1e4p,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,3,3,Flirty,Abbreviation
+2024-11-30 16:30:40,2024-11-30 16:51:41,IP Address,50.212.127.9,100,1261,True,2024-11-30 16:51:42,R_7lhn8sfr0cdWNUd,,,,,40.8322,-73.2238,anonymous,EN,Yes,Yes,2,3,2,Curious,Abbreviation
+2024-11-30 16:52:03,2024-11-30 16:53:25,IP Address,174.192.197.180,100,82,True,2024-11-30 16:53:25,R_6q4RK2KrtNm2KwF,,,,,39.2842,-76.6918,anonymous,EN,Yes,Yes,"Strongly Agree
+5
+",4,3,Flirty,Abbreviation
+2024-11-30 19:02:05,2024-11-30 19:02:49,IP Address,104.28.76.236,100,44,True,2024-11-30 19:02:50,R_1MSeufdxI8iOAM0,,,,,38.9994,-77.0336,anonymous,EN,Yes,Yes,3,3,3,Flirty,NoAbbreviation
+2024-11-30 19:02:09,2024-11-30 19:03:03,IP Address,173.66.59.129,100,53,True,2024-11-30 19:03:03,R_6HZ1xpAWKoiaGiZ,,,,,39.0397,-77.1918,anonymous,EN,Yes,Yes,3,3,3,Flirty,NoAbbreviation
+2024-11-30 19:02:10,2024-11-30 19:03:09,IP Address,173.66.59.129,100,59,True,2024-11-30 19:03:09,R_3wBMYuXXj3AfJd8,,,,,39.0397,-77.1918,anonymous,EN,Yes,Yes,3,4,3,Flirty,NoAbbreviation
+2024-11-30 19:02:09,2024-11-30 19:03:10,IP Address,173.66.59.129,100,60,True,2024-11-30 19:03:10,R_5ApYxVYmS2vAUUh,,,,,39.0397,-77.1918,anonymous,EN,Yes,Yes,4,"Strongly Agree
+5
+",3,Curious,NoAbbreviation
+2024-11-30 19:02:32,2024-11-30 19:03:48,IP Address,174.192.193.32,100,75,True,2024-11-30 19:03:49,R_7VwJu6CTt6teOJh,,,,,39.1063,-76.866,anonymous,EN,Yes,Yes,"Strongly Agree
+5
+","Strongly Agree
+5
+","Strongly Agree
+5
+",Flirty,Abbreviation
+2024-12-01 02:23:55,2024-12-01 02:25:09,IP Address,104.28.30.79,100,73,True,2024-12-01 02:25:09,R_2mUjGKVc1fstBQT,,,,,52.3534,4.9087,anonymous,EN,Yes,Yes,2,3,3,Curious,Abbreviation
+2024-12-02 11:00:07,2024-12-02 11:00:51,IP Address,130.64.64.38,100,44,True,2024-12-02 11:00:51,R_65xBcjSPHMu8wpz,,,,,42.4178,-71.1134,anonymous,EN,Yes,Yes,3,3,3,Curious,NoAbbreviation
+2024-12-02 14:49:37,2024-12-02 14:50:40,IP Address,131.229.0.28,100,63,True,2024-12-02 14:50:42,R_7sc5MlynzzWqvfn,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",3,4,Curious,NoAbbreviation
+2024-12-02 14:49:40,2024-12-02 14:51:26,IP Address,131.229.0.27,100,105,True,2024-12-02 14:51:26,R_7VWOjCPKAVD5bdn,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Agree
+5
+",4,4,Flirty,Abbreviation
+2024-12-02 14:49:55,2024-12-02 14:51:45,IP Address,131.229.0.13,100,110,True,2024-12-02 14:51:45,R_5urU69BsrelDtBf,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",2,"Strongly Disagree
+1
+",Curious,Abbreviation
+2024-12-02 14:57:20,2024-12-02 14:58:09,IP Address,73.232.89.246,100,48,True,2024-12-02 14:58:09,R_6fCPMuNHTuaLtka,,,,,29.8118,-95.5088,anonymous,EN,Yes,Yes,2,4,3,Curious,NoAbbreviation
+2024-12-02 14:57:32,2024-12-02 14:59:00,IP Address,128.252.230.173,100,87,True,2024-12-02 14:59:00,R_5riURPqgdCdFSmB,,,,,38.6487,-90.3297,anonymous,EN,Yes,Yes,3,"Strongly Agree
+5
+",4,Curious,Abbreviation
+2024-12-02 14:59:46,2024-12-02 15:00:59,IP Address,174.206.232.202,100,72,True,2024-12-02 15:00:59,R_6CAT17pQZtccmpR,,,,,40.6278,-74.3943,anonymous,EN,Yes,Yes,2,2,2,Flirty,Abbreviation
+2024-12-02 15:00:52,2024-12-02 15:01:53,IP Address,128.252.230.170,100,61,True,2024-12-02 15:01:54,R_6DvSxlKsR37zB34,,,,,38.6487,-90.3297,anonymous,EN,Yes,Yes,2,4,4,Flirty,Abbreviation
+2024-12-02 15:00:54,2024-12-02 15:02:00,IP Address,128.252.229.155,100,66,True,2024-12-02 15:02:00,R_16j6R62yLvP37Db,,,,,38.6487,-90.3297,anonymous,EN,Yes,Yes,4,4,4,Flirty,NoAbbreviation
+2024-12-02 15:21:45,2024-12-02 15:22:32,IP Address,129.7.0.205,100,46,True,2024-12-02 15:22:33,R_12zpww5N9URHgGk,,,,,29.8365,-95.437,anonymous,EN,Yes,Yes,2,4,3,Curious,NoAbbreviation
+2024-12-02 15:23:08,2024-12-02 15:23:55,IP Address,70.139.117.221,100,46,True,2024-12-02 15:23:55,R_393VY9LcZkqy7Ab,,,,,29.6924,-95.513,anonymous,EN,Yes,Yes,4,4,3,Curious,Abbreviation
+2024-12-02 18:55:14,2024-12-02 18:55:55,IP Address,131.229.0.0,100,40,True,2024-12-02 18:55:56,R_1uoChNM495fhDAR,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",2,2,Curious,NoAbbreviation
+2024-12-03 17:07:40,2024-12-03 17:08:48,IP Address,131.229.0.29,100,67,True,2024-12-03 17:08:48,R_6P6QE1Xe3viAO0k,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+","Strongly Disagree
+1
+",2,Flirty,NoAbbreviation
+2024-12-03 17:07:55,2024-12-03 17:09:00,IP Address,131.229.0.30,100,65,True,2024-12-03 17:09:00,R_1h9ZYmHWA3YF2sK,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,3,4,3,Curious,NoAbbreviation
+2024-12-03 17:07:51,2024-12-03 17:09:45,IP Address,131.229.0.21,100,113,True,2024-12-03 17:09:46,R_7AlHLqUL8koTP45,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,4,4,3,Flirty,NoAbbreviation
+2024-12-03 17:09:30,2024-12-03 17:10:24,IP Address,131.229.0.26,100,53,True,2024-12-03 17:10:24,R_7EVTeb92nYqKKzq,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,"Strongly Disagree
+1
+",4,2,Flirty,NoAbbreviation
+2024-12-03 19:17:37,2024-12-03 19:18:37,IP Address,131.229.0.11,100,60,True,2024-12-03 19:18:37,R_3ja0v3dGavSkMLf,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,4,3,4,Curious,NoAbbreviation
+2024-12-03 19:49:06,2024-12-03 19:49:49,IP Address,131.229.0.10,100,42,True,2024-12-03 19:49:50,R_5QWcbmOinOEDCqw,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,3,4,3,Curious,Abbreviation
+2024-12-04 06:55:40,2024-12-04 06:57:22,IP Address,131.229.0.10,100,101,True,2024-12-04 06:57:23,R_5jetJ5xvxPl6WCn,,,,,42.3182,-72.6419,anonymous,EN,Yes,Yes,2,2,3,Curious,Abbreviation
+2024-11-30 14:48:56,2024-11-30 14:49:23,IP Address,50.186.202.234,78,27,False,2024-12-07 14:49:25,R_5KqeE4xYbLzD59K,,,,,,,anonymous,EN,Yes,Yes,,,,,
